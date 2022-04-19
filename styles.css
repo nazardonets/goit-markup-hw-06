@@ -719,6 +719,11 @@ img {
 	transition: color var(--animation-type1), transform var(--animation-type1);
 }
 
+.order-form__input-field:hover,
+.order-form__textarea-field:hover {
+	border-color: var(--color-brand);
+}
+
 .order-form__input-field:focus-within,
 .order-form__textarea-field:focus-within {
 	outline: none;
@@ -759,6 +764,7 @@ img {
 	border-radius: 4px;
 	padding: 12px 16px;
 	resize: none;
+	transition: border-color var(--animation-type1);
 }
 
 .order-form__textarea-field::placeholder,
