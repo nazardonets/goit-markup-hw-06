@@ -797,7 +797,7 @@ img {
 	place-content: center;
 	width: 16px;
 	height: 15px;
-	background-color: #fff;
+	background-color: var(--color-white);
 	margin-right: 7px;
 	border: 2px solid var(--color-dark-grey);
 	border-radius: 2px;
