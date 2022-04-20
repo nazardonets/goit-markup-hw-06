@@ -227,13 +227,14 @@ img {
 .hero__button,
 .order-form__btn-submit,
 .newsletter-form__btn-submit {
+	width: 200px;
+	height: 50px;
+	background-color: var(--color-brand);
 	color: var(--color-white);
-	padding: 10px 32px 10px 32px;
 	font-size: 16px;
 	font-weight: 700;
 	letter-spacing: 0.06em;
 	line-height: 1.87;
-	background-color: var(--color-brand);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 	border: none;
@@ -244,7 +245,9 @@ img {
 .hero__button:hover,
 .hero__button:focus,
 .order-form__btn-submit:hover,
-.order-form__btn-submit:focus {
+.order-form__btn-submit:focus,
+.newsletter-form__btn-submit:hover,
+.newsletter-form__btn-submit:focus {
 	background-color: var(--color-brand-hover);
 }
 
@@ -572,7 +575,7 @@ img {
 }
 
 .footer-content__socials-cta-text,
-.newsletter-form__heading {
+.newsletter-form__label {
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 1.14;
@@ -602,13 +605,45 @@ img {
 	margin-bottom: 9px;
 }
 
+.footer-content__newsletter-block {
+	margin-left: auto;
+}
+
+.footer-content__newsletter-form {
+	max-width: 570px;
+}
+
+.newsletter-form__group {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.newsletter-form__label {
+	display: inline-flex;
+}
+
 .newsletter-form__input-field {
-	max-width: 358px;
+	padding: 0 16px;
+	margin-right: 12px;
+	width: 358px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+	border-radius: 4px;
 	height: 50px;
+	background-color: transparent;
+	transition: border-color var(--animation-type1);
+}
+
+.newsletter-form__input-field::placeholder {
+	font-size: 16px;
+	line-height: 1.25;
+	color: rgba(255, 255, 255, 0.6);
+	letter-spacing: 0.03em;
 }
 
 .newsletter-form__btn-submit {
 	display: flex;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -720,12 +755,14 @@ img {
 }
 
 .order-form__input-field:hover,
-.order-form__textarea-field:hover {
+.order-form__textarea-field:hover,
+.newsletter-form__input-field:hover {
 	border-color: var(--color-brand);
 }
 
 .order-form__input-field:focus-within,
-.order-form__textarea-field:focus-within {
+.order-form__textarea-field:focus-within,
+.newsletter-form__input-field:focus-within {
 	outline: none;
 	border-color: var(--color-brand);
 }
@@ -843,14 +880,4 @@ img {
 	text-decoration: underline;
 	width: 100%;
 	text-align: center;
-}
-
-.order-form__btn-submit,
-.newsletter-form__btn-submit {
-	width: 200px;
-	height: 50px;
-	left: 700px;
-	top: 712px;
-	background: var(--color-brand);
-	border-radius: 4px;
 }
